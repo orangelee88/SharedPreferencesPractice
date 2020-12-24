@@ -4,23 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal_200"
     tools:context=".MainActivity2">
 
     <Button
         android:id="@+id/btn1"
-        android:layout_width="187dp"
-        android:layout_height="72dp"
+        android:layout_width="197dp"
+        android:layout_height="91dp"
         android:layout_marginStart="150dp"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="181dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="150dp"
         android:layout_marginRight="150dp"
         android:background="#FFEB3B"
-        android:text="點我返回"
+        android:text="返回"
         android:textColor="#FF5722"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:background="#E47755"
+        android:gravity="center"
+        android:text=" SharedPreferences練習"
+        android:textColor="@color/purple_500"
+        android:textSize="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="3dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="245dp"
+        android:layout_height="304dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1"
+        app:srcCompat="@drawable/cat01" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

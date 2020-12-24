@@ -23,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
 
-        TextView addText = findViewById( R.id.txt2 );
-        TextView Text = findViewById( R.id.textView4 );
+        TextView Text = findViewById( R.id.txt4 );
 
         int add = getSharedPreferences( "test", MODE_PRIVATE ).getInt( "number", 0 );
 
@@ -41,19 +40,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity( intent );
             }
         } );
-
         Button button2 = findViewById( R.id.btn2 );
         button2.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                addText.setText( "HAHA" );
                 a = add + c;//add =最後數值
                 c++;
                 String s = Integer.toString( a );
                 Text.setText( s );
-                SharedPreferences pref = getSharedPreferences( "test", MODE_PRIVATE );
-                pref.edit()
+                SharedPreferences practice = getSharedPreferences( "test", MODE_PRIVATE );
+                practice.edit()
                         .putInt( "number", a )
                         .commit();
 
@@ -68,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
                 a = 0;
                 String b = Integer.toString( a );
                 Text.setText( b );
-                SharedPreferences pref = getSharedPreferences( "test", MODE_PRIVATE );
-                pref.edit().clear().commit();
+                SharedPreferences practice = getSharedPreferences( "test", MODE_PRIVATE );
+                practice.edit().clear().commit();
             }
         } );
     }
